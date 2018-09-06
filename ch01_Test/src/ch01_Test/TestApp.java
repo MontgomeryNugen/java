@@ -1,6 +1,7 @@
 package ch01_Test;
 
 
+import java.text.NumberFormat;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -39,6 +40,11 @@ public class TestApp {
 			System.out.println("i: " + i + "\tsum: " + sum);
 			//System.out.println(i);
 		}
+		
+		double majority = .5051;
+		NumberFormat percent = NumberFormat.getPercentInstance();
+		String majorityString = percent.format(majority);
+		System.out.println(majorityString);
 	}
 
 }
