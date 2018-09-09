@@ -32,19 +32,38 @@ public class TestApp {
 //		System.out.println("Goodbye, " + name +"!");		
 		
 //		input.close();
-		int i = 1;
-		int sum = 0;
-		while (i < 5) {
-			sum = sum + i;
-			i = i + 1;
-			System.out.println("i: " + i + "\tsum: " + sum);
-			//System.out.println(i);
-		}
+//		int i = 1;
+//		int sum = 0;
+//		while (i < 5) {
+//			sum = sum + i;
+//			i = i + 1;
+//			System.out.println("i: " + i + "\tsum: " + sum);
+//			//System.out.println(i);
+//		}
+//		
+//		double majority = .5051;
+//		NumberFormat percent = NumberFormat.getPercentInstance();
+//		String majorityString = percent.format(majority);
+//		System.out.println(majorityString);
 		
-		double majority = .5051;
-		NumberFormat percent = NumberFormat.getPercentInstance();
-		String majorityString = percent.format(majority);
-		System.out.println(majorityString);
+//		String numbers = "";
+//		for (int i = 0; i < 20; i+=2) {
+//			numbers += i + " ";
+//		}
+//		
+//		System.out.print(numbers);
+		
+		System.out.println(calculateFutureValue(100, .008, 12));
+		
+		
+}
+	public static double calculateFutureValue(double money, double rate, int months) {
+		double futureValue = 0.0;
+		for (int i = 1; i <= months; i++) {
+			futureValue = (futureValue + money) * (1 + rate);
+		}
+		return futureValue;
+		
 	}
 
 }

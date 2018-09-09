@@ -37,7 +37,9 @@ public class TestScoreApp {
 		}
 
 		// display the score count, score total, and average score
-		double averageScore = (double) scoreTotal / scoreCount;
+		//double averageScore = (double) scoreTotal / scoreCount;
+		double averageScore = scoreTotal / scoreCount;
+		averageScore = (double) Math.round((averageScore) * 10) / 10;
 		String message = "\n" + "Score count:   " + scoreCount + "\n" + "Score total:   " + scoreTotal + "\n"
 				+ "Average score: " + averageScore + "\n";
 		System.out.println(message);
