@@ -4,6 +4,8 @@ public class FactorialCalculatorApp {
 
 	public static void main(String[] args) {
 
+		//setup scanner to get user input,
+		//I use "input" instead of "sc" as I think it's clearer
 		Scanner input = new Scanner(System.in);
 		String choice = "y";
 
