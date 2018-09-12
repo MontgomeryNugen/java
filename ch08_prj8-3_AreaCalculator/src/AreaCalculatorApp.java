@@ -7,7 +7,7 @@ public class AreaCalculatorApp {
 		String choice = "y";
 		
 		while(choice.equalsIgnoreCase("y")) {
-			String shapeType = Console.getString("Calculate Area of c, s, or r?" );
+			String shapeType = Console.getString("Calculate Area of c, s, or r? " );
 			double h = 0.0;
 			double w = 0.0;
 			double r = 0.0;
@@ -24,12 +24,13 @@ public class AreaCalculatorApp {
 				break;
 			case "r":
 				w = Console.getDouble("Enter width: ");
-				h = Console.getDouble("Enter radius: ");
+				h = Console.getDouble("Enter height: ");
 				s = new Rectangle(w, h);
 				break;
 			}
 			
-			System.out.println("The Area is: " + s.getArea());
+			Class c = s.getClass();
+			System.out.println("The Area of the " + c.getName() + " you entered is: " + s.getArea());
 			choice = Console.getString("Continue (y/n)? ");
 		}
 		
