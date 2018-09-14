@@ -12,9 +12,9 @@ public class BoardGame extends Toy {
 	
 	
 
-	public BoardGame() {
-		
-	}
+//	public BoardGame() {
+//		
+//	}
 
 
 
