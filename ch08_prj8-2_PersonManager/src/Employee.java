@@ -8,7 +8,7 @@ public class Employee extends Person {
 	}
 
 	public String getSsn() {
-		return ssn;
+		return "XXX-XX-" + ssn.substring(7);
 	}
 
 	public void setSsn(String ssn) {

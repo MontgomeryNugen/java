@@ -10,12 +10,6 @@ public class Person {
 		this.lastName = last;
 	}
 
-//	public Person(String firstName, String lastName) {
-//		super();
-//		this.firstName = firstName;
-//		this.lastName = lastName;
-//	}
-
 	public String getFirstName() {
 		return firstName;
 	}
