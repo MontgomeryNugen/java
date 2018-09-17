@@ -5,6 +5,7 @@ public class Customer extends Person {
 
 	public Customer(String first, String last, String number) {
 		super(first, last);
+		this.customerNumber = number;
 	}
 
 	public String getCustomerNumber() {

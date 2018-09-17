@@ -5,10 +5,10 @@ public class Employee extends Person {
 
 	public Employee(String first, String last, String ssn) {
 		super(first, last);
+		this.ssn = ssn;
 	}
 
 	public String getSsn() {
-		//return "XXX-XX-" + ssn.substring(7);
 		return ssn;
 	}
 
@@ -18,7 +18,7 @@ public class Employee extends Person {
 
 	@Override
 	public String toString() {
-		return super.toString() + "\n" + "SSN: " + "XXX-XX-" + getSsn();
+		return super.toString() + "\n" + "SSN: " + "XXX-XX-" + ssn.substring(7);
 	}
 
 }
