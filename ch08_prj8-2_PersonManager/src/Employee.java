@@ -8,7 +8,8 @@ public class Employee extends Person {
 	}
 
 	public String getSsn() {
-		return "XXX-XX-" + ssn.substring(7);
+		//return "XXX-XX-" + ssn.substring(7);
+		return ssn;
 	}
 
 	public void setSsn(String ssn) {
@@ -17,7 +18,7 @@ public class Employee extends Person {
 
 	@Override
 	public String toString() {
-		return super.toString() + "\n" + "SSN: " + "XXX-XX-" + ssn.substring(7);
+		return super.toString() + "\n" + "SSN: " + "XXX-XX-" + getSsn();
 	}
 
 }
