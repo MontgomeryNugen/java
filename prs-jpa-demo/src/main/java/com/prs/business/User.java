@@ -19,6 +19,10 @@ public class User {
 	private boolean isReviewer;
 	private boolean isAdmin;
 
+	public User() {
+		super();
+	}
+
 	public User(int id, String userName, String password, String firstName, String lastName, String phoneNumber,
 			String email, boolean isReviewer, boolean isAdmin) {
 		super();

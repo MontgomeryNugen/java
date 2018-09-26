@@ -15,7 +15,7 @@ public class UserDB {
 		
 	}
 		
-	public List<User> list() {
+	public static List<User> list() {
 		EntityManager em = DBUtil.getEmFactory().createEntityManager();
 		
 		List<User> users = new ArrayList<>();
