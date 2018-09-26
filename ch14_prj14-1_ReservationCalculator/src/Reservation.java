@@ -1,4 +1,8 @@
+import java.text.NumberFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+import java.time.temporal.ChronoUnit;
 
 public class Reservation {
 
@@ -17,7 +21,9 @@ public class Reservation {
 	}
 
 	public String getArrivalDateFormatted() {
-		return null;
+		DateTimeFormatter dtf = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
+		String getArrivalDateFormatted = dtf.format(getArrivalDate());
+		return getArrivalDateFormatted;
 	}
 
 	public void setArrivalDate(LocalDate arrivalDate) {
@@ -29,7 +35,9 @@ public class Reservation {
 	}
 
 	public String getDepartureDateFormatted() {
-		return null;
+		DateTimeFormatter dtf = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
+		String getDepartureDateFormatted = dtf.format(getDepartureDate());
+		return getDepartureDateFormatted;
 	}
 
 	public void setDepartureDate(LocalDate departureDate) {
@@ -37,19 +45,25 @@ public class Reservation {
 	}
 
 	public int getNumberOfNights() {
-		return 0;
+		int numDays = (int) ChronoUnit.DAYS.between(getArrivalDate(), getDepartureDate());
+		return numDays;
 	}
 
 	public String getPricePerNightFormatted() {
-		return null;
+		NumberFormat currency = NumberFormat.getCurrencyInstance();
+		String priceNightFormattedString = currency.format(PRICE_PER_NIGHT);
+		return priceNightFormattedString;
 	}
 
 	public double getTotalPrice() {
-		return 0;
+		double totalPrice = PRICE_PER_NIGHT * getNumberOfNights();
+		return totalPrice;
 	}
 
 	public String getTotalPriceFormatted() {
-		return null;
+		NumberFormat currency = NumberFormat.getCurrencyInstance();
+		String priceTotalFormattedString = currency.format(getTotalPrice());
+		return priceTotalFormattedString;
 	}
 
 }
