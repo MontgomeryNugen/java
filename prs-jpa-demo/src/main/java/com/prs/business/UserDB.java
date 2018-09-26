@@ -1,15 +1,31 @@
 package com.prs.business;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+import com.prs.db.DBUtil;
 
 
 public class UserDB {
 	
 	public UserDB() {
+		
 	}
 		
-	public ArrayList<User> list() {
-		ArrayList<User> users = new ArrayList<>();
+	public List<User> list() {
+		EntityManager em = DBUtil.getEmFactory().createEntityManager();
+		
+		List<User> users = new ArrayList<>();
+		try {
+			Query q = em.createQuery("SELECT u FROM User u");
+			users = q.getResultList();
+		}
+		finally {
+			em.close();
+		}
 		
 		return users;
 	}
